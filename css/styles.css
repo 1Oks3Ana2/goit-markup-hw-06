@@ -901,7 +901,6 @@ img {
   height: 120px;
   padding: 16px 12px;
 
-  color: rgba(117, 117, 117, 0.5);
   font-size: 12px;
   font-weight: 400;
   line-height: 1.17;
@@ -911,6 +910,10 @@ img {
   border-radius: 4px;
 
   transition: border-color 250ms var(--time-function);
+}
+
+.comment-field::placeholder {
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .comment-field:hover,
