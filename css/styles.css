@@ -517,7 +517,7 @@ img {
 }
 
 .sub-container:nth-child(2) {
-  margin-right: 93px;
+  margin-right: auto;
 }
 
 .sub-container .socials {
@@ -765,6 +765,8 @@ img {
 }
 
 .modal {
+  padding: 40px;
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -805,7 +807,7 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
 
-  transition: fill 250ms var(--time-funtion);
+  transition: fill 250ms var(--time-function);
 }
 
 .modal-btn:hover,
@@ -815,14 +817,7 @@ img {
 
 /* Form modal */
 
-.form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .modal-title {
-  margin-top: 40px;
   margin-bottom: 12px;
 
   font-size: 20px;
@@ -834,8 +829,7 @@ img {
 
 .submit-label {
   position: relative;
-  display: flex;
-  flex-direction: column;
+  display: block;
 
   margin-bottom: 10px;
 
@@ -843,6 +837,7 @@ img {
 }
 
 .label-text {
+  display: block;
   margin-bottom: 4px;
 
   color: var(--secondary-text-color);
@@ -856,7 +851,7 @@ img {
   padding: 0;
   padding-left: 42px;
 
-  width: 448px;
+  width: 100%;
   height: 40px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -864,42 +859,40 @@ img {
 
   cursor: pointer;
 
-  transition: border-color 250ms var(--time-function);
-}
-
-.submit-input:hover + .icon-form,
-.submit-input:focus + .icon-form {
-  fill: currentColor;
+  transition: border 250ms var(--time-function);
 }
 
 .icon-form {
   position: absolute;
   left: 12px;
-  bottom: 11px;
-
+  top: 50%;
   cursor: pointer;
-}
 
-.input-active {
   transition: fill 250ms var(--time-function);
 }
 
-.input-active:hover,
-.input-active:focus {
-  fill: currentColor;
+.submit-label:hover > .submit-input,
+.submit-label:focus-within > .submit-input {
+  border: 1px solid var(--accent-color);
 }
 
-.input-active:hover .submit-input,
-.input-active:focus .submit-input {
-  border-color: var(--accent-color);
+.icon-form:hover + .submit-input,
+.icon-form:focus-within + .submit-input {
+  border: 1px solid var(--accent-color);
+}
+
+.submit-label:hover .icon-form,
+.submit-label:focus-within {
+  fill: currentColor;
 }
 
 /* Comment */
 
 .comment-field {
-  width: 448px;
+  width: 100%;
   height: 120px;
   padding: 16px 12px;
+  resize: none;
 
   font-size: 12px;
   font-weight: 400;
@@ -935,6 +928,7 @@ img {
 /* Submit button */
 
 .button.submit {
+  display: block;
   padding: 10px 52px;
   margin-right: auto;
   margin-left: auto;
@@ -950,6 +944,7 @@ img {
 }
 
 .agreement {
+  display: block;
   margin-bottom: 30px;
 }
 
@@ -983,7 +978,6 @@ img {
 .checkbox:checked + .checkbox-icon {
   background-image: url(../images/icon-check.svg);
   background-size: contain;
-  /* background-origin: border-box; */
 }
 
 .checkbox-field {
